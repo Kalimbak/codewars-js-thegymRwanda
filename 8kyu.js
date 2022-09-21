@@ -57,7 +57,58 @@ arr.push(el)
   return arr
 }
 function popElement(arr){
-  //pop an element from arr
+ 
 arr.pop()
   return arr;
+}
+
+
+// Training JS #6: Basic data types--Boolean and conditional statements if..else
+
+function trueOrFalse(val){
+  if (val == false || val == null)    return "false";             
+  else   return "true";
+}
+
+// Training JS #7: if..else and ternary operator
+
+function saleHotdogs(n){
+  return n<5 ? n*100 : n>=5 && n<10 ? n*95:  n*90 ;
+
+}
+
+// Training JS #8: Conditional statement--switch
+
+function howManydays(month){
+  var days;
+  switch (month){
+  case 2:
+  days = 28
+     break;
+      case 4:
+      days = 30
+      break;
+      case 6:
+      case 9:
+      case 11:
+      days = 30
+      break;
+  case 2:
+      days = 28
+      break;
+      default:
+      days= 31
+  }
+  
+  return days;
+}
+
+// Training JS #14: Methods of Number object--toString() and toLocaleString()
+
+function colorOf(r,g,b){
+return "#" + toHex(r) + toHex(g) + toHex(b);
+  function toHex(n){
+    var result = n.toString(16);
+    return result.length ==1 ? "0"+result : result;
+  }
 }
